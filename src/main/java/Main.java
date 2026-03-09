@@ -7,12 +7,10 @@ public class Main {
             char first = 'r';
             char last  = 'w';
 
-            String result = StringTransformer.substringDeletion(str, first, last);
+            StringTransformer transformer = new StringTransformer();
+            String result = transformer.substringDeletion(str, first, last);
             System.out.println(result);
-        } catch (NullPointerException e) {
-            System.out.println("Помилка: вхідний текст не може бути порожнім");
-        } catch (StringIndexOutOfBoundsException e) {
-            System.out.println("Помилка індексів");
+
         } catch (Exception e) {
             System.out.println("Сталася неочікувана помилка. " + e.getMessage());
         }
